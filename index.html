@@ -3,21 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GreenHaven Realty | Find Your Dream Property</title>
-  
-  <!-- Bootstrap 5.3.3 CSS -->
+  <title>GreenHaven Realty | Find Your Dream Property in Nigeria</title>
+  <meta name="description" content="Premium real estate listings in Lagos, Abuja & Port Harcourt. Instant WhatsApp contact & advanced search.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --gh-primary: #2E7D32;
       --gh-primary-rgb: 46, 125, 50;
       --gh-accent: #D4AF37;
-      --gh-dark-bg: #0f172a;
       --gh-light-bg: #f8fafc;
       --gh-card-bg: #ffffff;
       --gh-text: #111827;
@@ -27,7 +22,6 @@
       --gh-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
       --gh-transition: all 0.3s cubic-bezier(.4,0,.2,1);
     }
-
     [data-bs-theme="dark"] {
       --gh-light-bg: #0f172a;
       --gh-card-bg: #1e293b;
@@ -36,185 +30,37 @@
       --gh-border: #334155;
       --gh-shadow: 0 4px 6px -1px rgba(0,0,0,.4);
     }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--gh-light-bg);
-      color: var(--gh-text);
-      transition: var(--gh-transition);
-    }
-
-    .display-heading {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-    }
-
-    /* Navbar */
-    .navbar {
-      background: rgba(var(--gh-card-bg), 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--gh-border);
-      transition: var(--gh-transition);
-    }
-
-    .btn-primary, .btn-outline-primary {
-      --bs-btn-color: #fff;
-      --bs-btn-bg: var(--gh-primary);
-      --bs-btn-border-color: var(--gh-primary);
-      --bs-btn-hover-bg: #1b5e20;
-      --bs-btn-hover-border-color: #1b5e20;
-      --bs-btn-active-bg: #1b5e20;
-      --bs-btn-active-border-color: #1b5e20;
-    }
-
-    .btn-accent {
-      --bs-btn-color: #111827;
-      --bs-btn-bg: var(--gh-accent);
-      --bs-btn-border-color: var(--gh-accent);
-      --bs-btn-hover-bg: #c5a028;
-      --bs-btn-hover-border-color: #c5a028;
-    }
-
-    /* Cards */
-    .property-card {
-      background: var(--gh-card-bg);
-      border-radius: var(--gh-radius);
-      border: 1px solid var(--gh-border);
-      overflow: hidden;
-      transition: var(--gh-transition);
-      box-shadow: var(--gh-shadow);
-    }
-    .property-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 15px -3px rgba(0,0,0,.1);
-    }
-    .property-img-wrapper {
-      position: relative;
-      height: 240px;
-      overflow: hidden;
-    }
-    .property-img-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-    .property-card:hover .property-img-wrapper img {
-      transform: scale(1.05);
-    }
-    .badge-status {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      padding: 6px 10px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-    }
+    body { font-family: 'Inter', sans-serif; background: var(--gh-light-bg); color: var(--gh-text); transition: var(--gh-transition); }
+    .display-heading { font-family: 'Playfair Display', serif; font-weight: 700; }
+    .navbar { background: rgba(var(--gh-card-bg), 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gh-border); transition: var(--gh-transition); }
+    .btn-primary { --bs-btn-bg: var(--gh-primary); --bs-btn-border-color: var(--gh-primary); --bs-btn-hover-bg: #1b5e20; --bs-btn-hover-border-color: #1b5e20; }
+    .btn-outline-primary { --bs-btn-color: var(--gh-primary); --bs-btn-border-color: var(--gh-primary); --bs-btn-hover-bg: var(--gh-primary); --bs-btn-hover-color: #fff; }
+    .property-card { background: var(--gh-card-bg); border-radius: var(--gh-radius); border: 1px solid var(--gh-border); overflow: hidden; transition: var(--gh-transition); box-shadow: var(--gh-shadow); }
+    .property-card:hover { transform: translateY(-6px); box-shadow: 0 10px 15px -3px rgba(0,0,0,.1); }
+    .property-img-wrapper { position: relative; height: 240px; overflow: hidden; }
+    .property-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+    .property-card:hover .property-img-wrapper img { transform: scale(1.05); }
+    .badge-status { position: absolute; top: 12px; left: 12px; padding: 6px 10px; border-radius: 8px; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; }
     .badge-sale { background: var(--gh-primary); color: #fff; }
     .badge-rent { background: var(--gh-accent); color: #111827; }
-
     .price { font-size: 1.5rem; font-weight: 700; color: var(--gh-primary); }
     .feature-icon { color: var(--gh-text-muted); margin-right: 4px; }
-
-    /* Search Section */
-    .search-box {
-      background: var(--gh-card-bg);
-      padding: 1.5rem;
-      border-radius: var(--gh-radius);
-      box-shadow: var(--gh-shadow);
-      border: 1px solid var(--gh-border);
-    }
-
-    /* WhatsApp Float */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 56px;
-      height: 56px;
-      background: #25D366;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      box-shadow: 0 4px 12px rgba(37,211,102,.4);
-      z-index: 1000;
-      transition: var(--gh-transition);
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.1) rotate(10deg);
-      color: white;
-    }
-
-    /* Map */
-    .map-container {
-      border-radius: var(--gh-radius);
-      overflow: hidden;
-      height: 400px;
-      border: 1px solid var(--gh-border);
-    }
+    .search-box { background: var(--gh-card-bg); padding: 1.5rem; border-radius: var(--gh-radius); box-shadow: var(--gh-shadow); border: 1px solid var(--gh-border); }
+    .whatsapp-float { position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; background: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 4px 12px rgba(37,211,102,.4); z-index: 1000; transition: var(--gh-transition); text-decoration: none; }
+    .whatsapp-float:hover { transform: scale(1.1) rotate(10deg); color: white; }
+    .map-container { border-radius: var(--gh-radius); overflow: hidden; height: 400px; border: 1px solid var(--gh-border); }
     .map-container iframe { width: 100%; height: 100%; border: 0; }
-
-    /* Dashboard Preview */
-    .dashboard-layout {
-      background: var(--gh-card-bg);
-      border-radius: var(--gh-radius);
-      padding: 1.5rem;
-      border: 1px solid var(--gh-border);
-      min-height: 400px;
-    }
-    .stat-card {
-      background: linear-gradient(135deg, var(--gh-primary) 0%, #1b5e20 100%);
-      color: white;
-      border-radius: var(--gh-radius);
-      padding: 1.25rem;
-    }
-    .stat-card.alt { background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%); }
-
-    /* Theme Toggle */
-    .theme-toggle {
-      background: none;
-      border: 1px solid var(--gh-border);
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: var(--gh-transition);
-    }
+    .theme-toggle { background: none; border: 1px solid var(--gh-border); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--gh-transition); color: var(--gh-text); }
     .theme-toggle:hover { background: rgba(var(--gh-primary-rgb), 0.1); }
-
-    /* Pagination */
-    .pagination .page-link {
-      border-radius: 0.5rem;
-      margin: 0 4px;
-      border: 1px solid var(--gh-border);
-      color: var(--gh-text);
-    }
-    .pagination .page-item.active .page-link {
-      background: var(--gh-primary);
-      border-color: var(--gh-primary);
-    }
-
-    @media (max-width: 768px) {
-      .display-3 { font-size: 2.25rem; }
-      .property-img-wrapper { height: 200px; }
-      .map-container { height: 300px; }
-    }
+    .pagination .page-link { border-radius: 0.5rem; margin: 0 4px; border: 1px solid var(--gh-border); color: var(--gh-text); background: var(--gh-card-bg); }
+    .pagination .page-item.active .page-link { background: var(--gh-primary); border-color: var(--gh-primary); color: #fff; }
+    @media (max-width: 768px) { .display-3 { font-size: 2.25rem; } .property-img-wrapper { height: 200px; } .map-container { height: 300px; } }
   </style>
 </head>
 <body>
-
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top py-3">
     <div class="container">
-      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
         <i class="fa-solid fa-leaf text-success fs-4"></i>
         <span class="display-heading fs-4">GreenHaven</span>
       </a>
@@ -226,42 +72,38 @@
           <li class="nav-item"><a class="nav-link active fw-medium" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link fw-medium" href="#listings">Properties</a></li>
           <li class="nav-item"><a class="nav-link fw-medium" href="#contact">Contact</a></li>
-          <li class="nav-item"><a class="nav-link fw-medium" href="#dashboard">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium" href="dashboard.html">Dashboard</a></li>
         </ul>
         <div class="d-flex align-items-center gap-3">
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-            <i class="fa-solid fa-moon"></i>
-          </button>
-          <a href="#dashboard" class="btn btn-outline-primary px-3 py-2">Agent Login</a>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+          <a href="dashboard.html" class="btn btn-outline-primary px-3 py-2">Agent Login</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- Hero & Search -->
   <section id="home" class="py-5 py-lg-6">
     <div class="container py-4">
       <div class="row align-items-center gy-5">
         <div class="col-lg-7">
-          <h1 class="display-3 mb-3 display-heading">Find Your Perfect <span class="text-success">Home</span> Today</h1>
-          <p class="lead mb-4 text-muted">Browse premium listings, schedule viewings, and connect with verified agents. Your dream property is one search away.</p>
-          
+          <h1 class="display-3 mb-3 display-heading">Find Your Perfect <span class="text-success">Home</span> in Nigeria</h1>
+          <p class="lead mb-4 text-muted">Browse premium listings in Lagos, Abuja & Port Harcourt. Schedule viewings and connect with verified agents instantly via WhatsApp.</p>
           <div class="search-box mt-4">
             <form class="row g-3" id="searchForm">
               <div class="col-md-4">
                 <label class="form-label fw-medium">Location</label>
                 <div class="input-group">
                   <span class="input-group-text bg-transparent border-end-0"><i class="fa-solid fa-location-dot text-muted"></i></span>
-                  <input type="text" class="form-control border-start-0" placeholder="City, ZIP, or Neighborhood" name="location">
+                  <input type="text" class="form-control border-start-0" placeholder="Lekki, VI, Abuja..." name="location">
                 </div>
               </div>
               <div class="col-md-3">
-                <label class="form-label fw-medium">Min Price</label>
-                <input type="number" class="form-control" placeholder="$0" name="min_price">
+                <label class="form-label fw-medium">Min Price (₦)</label>
+                <input type="number" class="form-control" placeholder="5,000,000" name="min_price">
               </div>
               <div class="col-md-3">
-                <label class="form-label fw-medium">Max Price</label>
-                <input type="number" class="form-control" placeholder="$1,000,000+" name="max_price">
+                <label class="form-label fw-medium">Max Price (₦)</label>
+                <input type="number" class="form-control" placeholder="500,000,000" name="max_price">
               </div>
               <div class="col-md-2 d-flex align-items-end">
                 <button type="submit" class="btn btn-primary w-100 py-2"><i class="fa-solid fa-magnifying-glass me-2"></i>Search</button>
@@ -270,19 +112,18 @@
           </div>
         </div>
         <div class="col-lg-5 d-none d-lg-block">
-          <img src="https://placehold.co/600x400/2E7D32/ffffff?text=Modern+Living+Spaces" alt="Hero Property" class="img-fluid rounded-4 shadow-lg">
+          <img src="https://placehold.co/600x400/2E7D32/ffffff?text=Luxury+Homes+in+Lagos" alt="Hero Property" class="img-fluid rounded-4 shadow-lg">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Property Listings -->
   <section id="listings" class="py-5 bg-body-tertiary">
     <div class="container">
       <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-2">
         <div>
           <h2 class="display-heading mb-1">Featured Properties</h2>
-          <p class="text-muted mb-0">Handpicked listings updated daily</p>
+          <p class="text-muted mb-0">Handpicked listings across Nigeria</p>
         </div>
         <div class="d-flex gap-2">
           <button class="btn btn-sm btn-outline-secondary active">All</button>
@@ -290,79 +131,77 @@
           <button class="btn btn-sm btn-outline-secondary">For Rent</button>
         </div>
       </div>
-
       <div class="row g-4">
-        <!-- Property Card 1 -->
+        <!-- Property 1: Lekki -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="property-card h-100">
             <div class="property-img-wrapper">
-              <img src="https://placehold.co/600x400/cccccc/333333?text=Modern+Villa" alt="Property">
+              <img src="https://placehold.co/600x400/cccccc/333333?text=Lekki+Penthouse" alt="Property">
               <span class="badge-status badge-sale">For Sale</span>
             </div>
             <div class="p-3">
               <div class="d-flex justify-content-between align-items-start mb-2">
-                <h5 class="mb-0 fw-semibold">Oakwood Modern Villa</h5>
-                <span class="price">$845,000</span>
+                <h5 class="mb-0 fw-semibold">Lekki Peninsula Penthouse</h5>
+                <span class="price">₦185,000,000</span>
               </div>
-              <p class="text-muted mb-3"><i class="fa-solid fa-location-dot me-1"></i> Beverly Hills, CA</p>
+              <p class="text-muted mb-3"><i class="fa-solid fa-location-dot me-1"></i> Lekki Phase 1, Lagos</p>
               <div class="d-flex justify-content-between text-muted small border-top pt-3">
                 <span><i class="fa-solid fa-bed feature-icon"></i> 4 Beds</span>
-                <span><i class="fa-solid fa-bath feature-icon"></i> 3 Baths</span>
-                <span><i class="fa-solid fa-ruler-combined feature-icon"></i> 2,450 sqft</span>
+                <span><i class="fa-solid fa-bath feature-icon"></i> 5 Baths</span>
+                <span><i class="fa-solid fa-ruler-combined feature-icon"></i> 450 sqm</span>
               </div>
-              <a href="#detail-modal" data-bs-toggle="modal" class="btn btn-outline-primary w-100 mt-3">View Details</a>
+              <button class="btn btn-outline-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#detailModal">View Details</button>
             </div>
           </div>
         </div>
 
-        <!-- Property Card 2 -->
+        <!-- Property 2: VI Apartment -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="property-card h-100">
             <div class="property-img-wrapper">
-              <img src="https://placehold.co/600x400/aaaaaa/333333?text=City+Apartment" alt="Property">
+              <img src="https://placehold.co/600x400/aaaaaa/333333?text=VI+Apartment" alt="Property">
               <span class="badge-status badge-rent">For Rent</span>
             </div>
             <div class="p-3">
               <div class="d-flex justify-content-between align-items-start mb-2">
-                <h5 class="mb-0 fw-semibold">Downtown Loft Suite</h5>
-                <span class="price">$3,200/mo</span>
+                <h5 class="mb-0 fw-semibold">Victoria Island Luxury Flat</h5>
+                <span class="price">₦12,000,000/yr</span>
               </div>
-              <p class="text-muted mb-3"><i class="fa-solid fa-location-dot me-1"></i> Manhattan, NY</p>
+              <p class="text-muted mb-3"><i class="fa-solid fa-location-dot me-1"></i> Victoria Island, Lagos</p>
               <div class="d-flex justify-content-between text-muted small border-top pt-3">
-                <span><i class="fa-solid fa-bed feature-icon"></i> 2 Beds</span>
-                <span><i class="fa-solid fa-bath feature-icon"></i> 2 Baths</span>
-                <span><i class="fa-solid fa-ruler-combined feature-icon"></i> 1,100 sqft</span>
+                <span><i class="fa-solid fa-bed feature-icon"></i> 3 Beds</span>
+                <span><i class="fa-solid fa-bath feature-icon"></i> 3 Baths</span>
+                <span><i class="fa-solid fa-ruler-combined feature-icon"></i> 220 sqm</span>
               </div>
-              <a href="#detail-modal" data-bs-toggle="modal" class="btn btn-outline-primary w-100 mt-3">View Details</a>
+              <button class="btn btn-outline-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#detailModal">View Details</button>
             </div>
           </div>
         </div>
 
-        <!-- Property Card 3 -->
+        <!-- Property 3: Abuja -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="property-card h-100">
             <div class="property-img-wrapper">
-              <img src="https://placehold.co/600x400/999999/333333?text=Suburban+Home" alt="Property">
+              <img src="https://placehold.co/600x400/999999/333333?text=Abuja+Duplex" alt="Property">
               <span class="badge-status badge-sale">For Sale</span>
             </div>
             <div class="p-3">
               <div class="d-flex justify-content-between align-items-start mb-2">
-                <h5 class="mb-0 fw-semibold">Maple Creek Residence</h5>
-                <span class="price">$520,000</span>
+                <h5 class="mb-0 fw-semibold">Maitama Executive Duplex</h5>
+                <span class="price">₦320,000,000</span>
               </div>
-              <p class="text-muted mb-3"><i class="fa-solid fa-location-dot me-1"></i> Austin, TX</p>
+              <p class="text-muted mb-3"><i class="fa-solid fa-location-dot me-1"></i> Maitama, Abuja</p>
               <div class="d-flex justify-content-between text-muted small border-top pt-3">
-                <span><i class="fa-solid fa-bed feature-icon"></i> 3 Beds</span>
-                <span><i class="fa-solid fa-bath feature-icon"></i> 2 Baths</span>
-                <span><i class="fa-solid fa-ruler-combined feature-icon"></i> 1,850 sqft</span>
+                <span><i class="fa-solid fa-bed feature-icon"></i> 5 Beds</span>
+                <span><i class="fa-solid fa-bath feature-icon"></i> 6 Baths</span>
+                <span><i class="fa-solid fa-ruler-combined feature-icon"></i> 600 sqm</span>
               </div>
-              <a href="#detail-modal" data-bs-toggle="modal" class="btn btn-outline-primary w-100 mt-3">View Details</a>
+              <button class="btn btn-outline-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#detailModal">View Details</button>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Pagination -->
       <nav class="mt-5 d-flex justify-content-center">
         <ul class="pagination">
           <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
@@ -375,155 +214,53 @@
     </div>
   </section>
 
-  <!-- Contact & Map -->
   <section id="contact" class="py-5">
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-5">
           <h2 class="display-heading mb-3">Get in Touch</h2>
           <p class="text-muted mb-4">Interested in a property? Fill out the form or message us directly on WhatsApp for instant replies.</p>
-          <form class="row g-3">
-            <div class="col-12">
-              <input type="text" class="form-control" placeholder="Full Name" required>
-            </div>
-            <div class="col-12">
-              <input type="email" class="form-control" placeholder="Email Address" required>
-            </div>
-            <div class="col-12">
-              <textarea class="form-control" rows="4" placeholder="Message or Property ID..." required></textarea>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary w-100 py-2">Send Message</button>
-            </div>
+          <form class="row g-3" id="contactForm">
+            <div class="col-12"><input type="text" class="form-control" placeholder="Full Name" required></div>
+            <div class="col-12"><input type="email" class="form-control" placeholder="Email Address" required></div>
+            <div class="col-12"><textarea class="form-control" rows="4" placeholder="Message or Property ID..." required></textarea></div>
+            <div class="col-12"><button type="submit" class="btn btn-primary w-100 py-2">Send Message</button></div>
           </form>
           <div class="mt-4 d-flex gap-3 align-items-center">
             <i class="fa-solid fa-phone text-success fs-4"></i>
-            <span class="fw-medium">+1 (555) 012-3456</span>
+            <span class="fw-medium">+234 803 123 4567</span>
           </div>
         </div>
         <div class="col-lg-7">
           <div class="map-container shadow">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093747!2d144.9537353153166!3d-37.81627974202168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577321044197530!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253718.4153832122!2d3.3058333!3d6.4530556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen loading="lazy"></iframe>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Dashboard Preview (Frontend Mockup) -->
-  <section id="dashboard" class="py-5 bg-body-tertiary">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="display-heading mb-0">Agent Dashboard</h2>
-        <button class="btn btn-success"><i class="fa-solid fa-plus me-2"></i>Add New Property</button>
-      </div>
-      <div class="dashboard-layout">
-        <div class="row g-3 mb-4">
-          <div class="col-md-3">
-            <div class="stat-card">
-              <div class="d-flex justify-content-between mb-2">
-                <span>Total Listings</span>
-                <i class="fa-solid fa-house"></i>
-              </div>
-              <h3 class="mb-0 fw-bold">142</h3>
-              <small>+12 this month</small>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="stat-card alt">
-              <div class="d-flex justify-content-between mb-2">
-                <span>Active Views</span>
-                <i class="fa-solid fa-eye"></i>
-              </div>
-              <h3 class="mb-0 fw-bold">8,421</h3>
-              <small class="text-success"><i class="fa-solid fa-arrow-up"></i> 18%</small>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="stat-card">
-              <div class="d-flex justify-content-between mb-2">
-                <span>Inquiries</span>
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <h3 class="mb-0 fw-bold">234</h3>
-              <small class="text-success"><i class="fa-solid fa-arrow-up"></i> 7%</small>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="stat-card alt">
-              <div class="d-flex justify-content-between mb-2">
-                <span>Sold/Closed</span>
-                <i class="fa-solid fa-check-circle"></i>
-              </div>
-              <h3 class="mb-0 fw-bold">18</h3>
-              <small>Q2 2026</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="table-responsive">
-          <table class="table table-hover align-middle">
-            <thead class="border-bottom">
-              <tr>
-                <th>Property</th>
-                <th>Status</th>
-                <th>Price</th>
-                <th>Views</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><img src="https://placehold.co/40x40" class="rounded me-2" alt=""> Oakwood Modern Villa</td>
-                <td><span class="badge bg-success">Active</span></td>
-                <td>$845,000</td>
-                <td>1,240</td>
-                <td><button class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button></td>
-              </tr>
-              <tr>
-                <td><img src="https://placehold.co/40x40" class="rounded me-2" alt=""> Downtown Loft Suite</td>
-                <td><span class="badge bg-warning text-dark">Pending</span></td>
-                <td>$3,200/mo</td>
-                <td>890</td>
-                <td><button class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button></td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Property Detail Modal -->
-  <div class="modal fade" id="detail-modal" tabindex="-1" aria-hidden="true">
+  <div class="modal fade" id="detailModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header border-0 pb-0">
-          <h5 class="modal-title fw-bold">Oakwood Modern Villa</h5>
+          <h5 class="modal-title fw-bold">Lekki Peninsula Penthouse</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body pt-2">
           <img src="https://placehold.co/800x400" class="img-fluid rounded mb-3 w-100" alt="Property Detail">
           <div class="row g-3 mb-3">
-            <div class="col-4 text-center">
-              <i class="fa-solid fa-bed fs-4 text-success"></i>
-              <div class="fw-bold mt-1">4 Bedrooms</div>
-            </div>
-            <div class="col-4 text-center">
-              <i class="fa-solid fa-bath fs-4 text-success"></i>
-              <div class="fw-bold mt-1">3 Bathrooms</div>
-            </div>
-            <div class="col-4 text-center">
-              <i class="fa-solid fa-ruler-combined fs-4 text-success"></i>
-              <div class="fw-bold mt-1">2,450 sqft</div>
-            </div>
+            <div class="col-4 text-center"><i class="fa-solid fa-bed fs-4 text-success"></i><div class="fw-bold mt-1">4 Bedrooms</div></div>
+            <div class="col-4 text-center"><i class="fa-solid fa-bath fs-4 text-success"></i><div class="fw-bold mt-1">5 Bathrooms</div></div>
+            <div class="col-4 text-center"><i class="fa-solid fa-ruler-combined fs-4 text-success"></i><div class="fw-bold mt-1">450 sqm</div></div>
           </div>
-          <p class="text-muted">Beautifully renovated modern villa featuring an open-concept layout, smart home integration, and a private backyard with pool. Located in a quiet, family-friendly neighborhood.</p>
-          <div class="d-flex justify-content-between align-items-center border-top pt-3">
-            <span class="fs-4 fw-bold text-success">$845,000</span>
-            <div>
-              <button class="btn btn-outline-primary me-2">Schedule Tour</button>
-              <a href="https://wa.me/15550123456?text=Hi%2C%20I'm%20interested%20in%20Oakwood%20Modern%20Villa" target="_blank" class="btn btn-success"><i class="fa-brands fa-whatsapp me-1"></i>WhatsApp</a>
+          <p class="text-muted">Stunning penthouse with panoramic ocean views, 24/7 security, backup power, smart home features, and access to estate amenities including pool, gym, and tennis court.</p>
+          <div class="d-flex justify-content-between align-items-center border-top pt-3 flex-wrap gap-2">
+            <span class="fs-4 fw-bold text-success">₦185,000,000</span>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-primary">Schedule Tour</button>
+              <a href="https://wa.me/2348031234567?text=Hi%2C%20I'm%20interested%20in%20the%20Lekki%20Penthouse%20(₦185M)" target="_blank" class="btn btn-success"><i class="fa-brands fa-whatsapp me-1"></i>WhatsApp</a>
             </div>
           </div>
         </div>
@@ -532,27 +269,21 @@
   </div>
 
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/15550123456" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
+  <a href="https://wa.me/2348031234567" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 
-  <!-- Footer -->
   <footer class="bg-body-tertiary py-4 mt-5 border-top">
     <div class="container text-center text-muted">
-      <p class="mb-0">&copy; <span id="year"></span> GreenHaven Realty. All rights reserved.</p>
+      <p class="mb-0">&copy; <span id="year"></span> GreenHaven Realty Nigeria. All rights reserved.</p>
       <small>Built with Bootstrap 5 & PHP | <a href="#" class="text-success text-decoration-none">Privacy</a> | <a href="#" class="text-success text-decoration-none">Terms</a></small>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Theme Toggle
+    // Theme Toggle (synced across pages)
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
     const icon = themeToggle.querySelector('i');
-
-    // Load saved theme
     const savedTheme = localStorage.getItem('theme') || 'light';
     html.setAttribute('data-bs-theme', savedTheme);
     icon.className = savedTheme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
@@ -565,13 +296,17 @@
       icon.className = next === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
     });
 
-    // Search Form Handler (Frontend Demo)
+    // Search Form Handler
     document.getElementById('searchForm').addEventListener('submit', e => {
       e.preventDefault();
-      const formData = new FormData(e.target);
-      const params = new URLSearchParams(formData).toString();
-      // In production: window.location.href = `search.php?${params}`;
-      alert(`🔍 Searching with:\n${params}\n\n(Backend integration required to fetch real results)`);
+      alert('🔍 Backend search routing will activate here.\n(Connect to PHP/MySQL in next phase)');
+    });
+
+    // Contact Form Handler
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('📩 Message sent successfully!\n(Will connect to PHPMailer in backend phase)');
+      e.target.reset();
     });
 
     // Copyright Year
